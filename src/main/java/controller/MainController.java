@@ -1,19 +1,20 @@
 package controller;
 
-import org.springframework.stereotype.Controller;
+//import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class MainController {
 
     @RequestMapping("/")
-    String index() {
-        return "index";
+    public String index() {
+        return "Greetings from Spring Boot!";
     }
 
-    @RequestMapping("/home")
-    public String getHomepage() {
-        return "redirect:/home";
-    }
+//    @RequestMapping("/home")
+//    public String getHomepage() {
+//        return "redirect:/home";
+//    }
 
 }
